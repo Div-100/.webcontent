@@ -254,6 +254,7 @@ const generateFileData = (parsedData: Array<InternalKeyword>) => {
     };
     for (let i = 0; i < parsedData.length; i++) {
         const currentKeyword = parsedData[i];
+
         if (currentKeyword.text.toLowerCase() === "scriptfile") {
             if (
                 currentKeyword.value?.length === 0 ||
@@ -291,6 +292,7 @@ const generateFileData = (parsedData: Array<InternalKeyword>) => {
 
         for (let j = 0; j < currentKeyword.children.length; j++) {
             const child = currentKeyword.children[j];
+
             if (child.text.toLowerCase() === "title") {
                 if (
                     (child.value?.length ?? 0) === 0 ||
@@ -382,8 +384,10 @@ const generateFileData = (parsedData: Array<InternalKeyword>) => {
                 continue;
             }
         }
+
         fileData.languages.set(currentKeyword.text, currentLanguage);
     }
+    
     return fileData;
 };
 

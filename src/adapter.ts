@@ -11,9 +11,10 @@ export type AdapterOptions = {
 
 export class Adapter {
     constructor(options: AdapterOptions) {
-        this.contentFolder = options.contentFolder;
         this.autoRefreshTime = options.autoRefreshTime ?? 3_600_000;
-
+        this.baseRoute = options.baseRoute ?? __dirname;
+        this.contentFolder = options.contentFolder.replace("~/", `${this.baseRoute}/`);
+        
         this.initialise();
         this.currentRefreshTimeout = setTimeout(() => {
             this.initialise();
@@ -21,6 +22,7 @@ export class Adapter {
                 this.refresh();
             }, this.autoRefreshTime);
         }, this.autoRefreshTime);
+
     }
 
     private contentFolder: string;
@@ -28,6 +30,7 @@ export class Adapter {
     private currentRefreshTimeout: ReturnType<typeof setTimeout>;
     private intitialised = false;
     private isInitialising = false;
+    private baseRoute: string;
 
     private languagesByFileRoute: Map<
         string /* Content File Route */,
@@ -73,12 +76,13 @@ export class Adapter {
 
             // set by script file
             const scriptFile = path.join(
-                data.scriptFile.replace("~/", `${this.contentFolder}/`)
+                data.scriptFile.replace("~/", `${this.baseRoute}/`)
             );
 
             if (this.languagesByScriptFile.has(scriptFile)) {
                 throw new DuplicateScriptFileError(scriptFile);
             }
+
             this.languagesByScriptFile.set(scriptFile, data.languages);
 
             // set by languages
@@ -96,6 +100,7 @@ export class Adapter {
                 existingLanguages.set(text, language);
             }
         };
+
         const promises = webContentFiles.map((file) => setFileData(file));
         Promise.allSettled(promises).then(() => {
             this.intitialised = true;
