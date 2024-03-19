@@ -1,18 +1,39 @@
 {
-  "name": "webcontent",
-  "version": "2024.0.0",
-  "description": "An adpater to parse .webcontent files.",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "build": "npx tsc",
-    "dev": "tsc -w"
-  },
-  "author": "div-100",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^20.11.27",
-    "concurrently": "^8.2.2",
-    "typescript": "^5.4.2"
-  }
+    "name": "webcontent",
+    "version": "2024.0.0",
+    "description": "An adpater to parse .webcontent files.",
+    "main": "dist/index.js",
+    "publishConfig": {
+        "access": "public"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "npx tsc",
+        "dev": "tsc -w",
+        "prepublish": "npm run build"
+    },
+    "files": [
+        "lib/"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Div-100/.webcontent.git"
+    },
+    "keywords": [
+        "webcontent",
+        "parser",
+        "adapter",
+        "typescript"
+    ],
+    "bugs": {
+        "url": "https://github.com/Div-100/.webcontent/issues"
+    },
+    "homepage": "https://github.com/Div-100/.webcontent/",
+    "author": "div-100",
+    "license": "GPL-3.0-only",
+    "devDependencies": {
+        "@types/node": "^20.11.27",
+        "concurrently": "^8.2.2",
+        "typescript": "^5.4.2"
+    }
 }
