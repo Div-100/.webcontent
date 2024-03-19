@@ -1,6 +1,6 @@
 {
     "name": "webcontent",
-    "version": "2024.0.1",
+    "version": "2024.0.3",
     "description": "An adpater to parse .webcontent files.",
     "main": "dist/index.js",
     "publishConfig": {
@@ -13,7 +13,8 @@
         "prepublish": "npm run build"
     },
     "files": [
-        "lib/"
+        "lib/",
+        "lib/**/*"
     ],
     "repository": {
         "type": "git",
