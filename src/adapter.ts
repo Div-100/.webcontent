@@ -13,6 +13,7 @@ export class Adapter {
     constructor(options: AdapterOptions) {
         this.contentFolder = options.contentFolder;
         this.autoRefreshTime = options.autoRefreshTime ?? 3_600_000;
+
         this.initialise();
         this.currentRefreshTimeout = setTimeout(() => {
             this.initialise();
@@ -26,6 +27,7 @@ export class Adapter {
     private autoRefreshTime: number;
     private currentRefreshTimeout: ReturnType<typeof setTimeout>;
     private intitialised = false;
+    private isInitialising = false;
 
     private languagesByFileRoute: Map<
         string /* Content File Route */,
@@ -51,6 +53,8 @@ export class Adapter {
     }
 
     private async initialise() {
+        if (this.isInitialising) return;
+        this.isInitialising = true;
         this.intitialised = false;
         const files = await fs.promises.readdir(this.contentFolder);
         const webContentFiles = files.filter((file) =>
@@ -95,6 +99,7 @@ export class Adapter {
         const promises = webContentFiles.map((file) => setFileData(file));
         Promise.allSettled(promises).then(() => {
             this.intitialised = true;
+            this.isInitialising = false;
         });
     }
 
