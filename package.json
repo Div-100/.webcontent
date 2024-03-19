@@ -1,6 +1,6 @@
 {
     "name": "webcontent",
-    "version": "2024.0.3",
+    "version": "2024.0.4",
     "description": "An adpater to parse .webcontent files.",
     "main": "dist/index.js",
     "publishConfig": {
@@ -16,6 +16,7 @@
         "lib/",
         "lib/**/*"
     ],
+    "types": "lib/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/Div-100/.webcontent.git"
