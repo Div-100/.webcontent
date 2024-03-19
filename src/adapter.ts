@@ -1,7 +1,7 @@
 import fs from "node:fs";
-import parseFile, { Language } from "./parseFile";
+import parseFile, { Language } from "./parseFile.js";
 import path from "node:path";
-import { DuplicateLanguageError, DuplicateScriptFileError } from "./errors";
+import { DuplicateLanguageError, DuplicateScriptFileError } from "./errors.js";
 
 export type AdapterOptions = {
     contentFolder: string;

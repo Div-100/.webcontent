@@ -11,7 +11,7 @@ import {
     UnknownPlacementOfCharacterError,
     ValueExpected,
     potentialImproperUsageOfColon,
-} from "./errors";
+} from "./errors.js";
 
 const KNOWN_KEYWORDS = ["scriptfile", "title", "route", "metadata", "content"];
 

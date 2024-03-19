@@ -1,1 +1,1 @@
-export { Adapter } from "./adapter";
+export { Adapter } from "./adapter.js";
