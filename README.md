@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/Div-100/.webcontent/main/webcontent.png" alt=".webcontent" style="height: 5rem;" />](https://github.com/div-100/.webcontent)
+[<img src="webcontent.png" alt=".webcontent" style="height: 5rem;" />](https://github.com/div-100/.webcontent)
 
 .webcontent is a file extension designed to empower content writers and developers to work together in harmony.
 It is a file format, which is similar to JSON, but with more freedom that allows content writers to write content in a structured manner and developers to access it with ease. The file format is designed to be simple, flexible, and easy to use, making it ideal for websites.
@@ -31,22 +31,21 @@ pnpm add webcontent
 
 ### Script File
 
-The primary file of your page. For e.g. in remix.run, it will be the file which contains your loader and action functions
-Supported values: string
+The primary file of your page. For e.g. in remix.run, it will be the file which contains your loader and action functions<br/>
+**Supported values:** string
 
 ### Languages
+**Supported values:** children
+#### Known Keywords:
 
-Supported values: children
-Known Keywords:
-
--   \*Route: The route of the language, multiple languages can have the same route. (string)
--   \*Title: The title of the page. (string)
--   Metadata: The metadata of the page. (string, children)
+-   \*Route: The route of the language, multiple languages can have the same route. **(string)**
+-   \*Title: The title of the page. **(string)**
+-   Metadata: The metadata of the page. **(string, children)**<br/>
     Can contain as many children to any depth.
--   Content: The content of the page. (string, children)
+-   Content: The content of the page. **(string, children)**<br/>
     Can contain as many children to any depth.
 
-(\*) Indicates that the keyword is required
+(\*) *Indicates that the keyword is required*
 
 ## Usage
 
