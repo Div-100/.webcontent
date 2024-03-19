@@ -1,6 +1,6 @@
 {
     "name": "webcontent",
-    "version": "2024.0.6",
+    "version": "2024.0.7",
     "description": "An adpater to parse .webcontent files.",
     "main": "lib/index.js",
     "publishConfig": {
