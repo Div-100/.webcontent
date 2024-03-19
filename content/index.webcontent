@@ -1,0 +1,40 @@
+scriptfile "`~/../routes/_index.tsx`";
+
+EN/UK: {
+    title "`Index`",
+    route "`/`",
+    metadata {
+        description: "`aa`",
+        keywords: "`aa`"
+    },
+    content {
+        sectionName1: {
+            heading1: "`content
+aaaaaaaaa aaaaaaaaa`",
+            heading2: "`content`"
+        },
+        sectionName2: {
+            heading1: "`content`",
+            heading2: "`content`"
+        }
+    }
+};
+
+ES/ES: {
+    title "`Index`",
+    route "`/`",
+    metadata {
+        description: "`aa`",
+        keywords: "`aa`"
+    },
+    content {
+        sectionName1: {
+            heading1: "`content`",
+            heading2: "`content`"
+        },
+        sectionName2: {
+            heading1: "`content`",
+            heading2: "`content`"
+        },
+    },  
+};
