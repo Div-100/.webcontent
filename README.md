@@ -1,4 +1,4 @@
-# .webcontent
+[<img src="https://raw.githubusercontent.com/Div-100/.webcontent/main/webcontent.png" alt=".webcontent" style="height: 5rem;" />](https://github.com/div-100/.webcontent)
 
 .webcontent is a file extension designed to empower content writers and developers to work together in harmony.
 It is a file format, which is similar to JSON, but with more freedom that allows content writers to write content in a structured manner and developers to access it with ease. The file format is designed to be simple, flexible, and easy to use, making it ideal for websites.
@@ -126,9 +126,9 @@ To contribute to this project, please follow these steps to create a pull reques
 Congratulations! You have successfully created a pull request. Thank you for your contribution!
 
 ## License
-GNU GENERAL PUBLIC LICENSE
-Version 3, 29 June 2007
+GNU GENERAL PUBLIC LICENSE<br/>
+Version 3, 29 June 2007<br/>
 [License](https://github.com/Div-100/.webcontent/blob/main/LICENSE)
 
 ## Author
-[Divyansh Choudhary](https://github.com/Div-100)
+<a href="https://github.com/Div-100" style="display: flex; align-items: center;"><img src="https://avatars.githubusercontent.com/u/70841128?v=4" alt="Avatar - Divyansh Choudhary" height="32" style="padding: 0.5rem; border-radius: 99999999rem;" /> Divyansh Choudhary</a>
