@@ -41,14 +41,13 @@ The primary file of your page. For e.g. in remix.run, it will be the file which 
 -   \*Route: The route of the language, multiple languages can have the same route. **(string)**
 -   \*Title: The title of the page. **(string)**
 -   Metadata: The metadata of the page. **(string, children)**<br/>
-    Can contain as many children to any depth.
+    May contain as many children to any depth.
 -   Content: The content of the page. **(string, children)**<br/>
-    Can contain as many children to any depth.
+    May contain as many children to any depth.
 
 (\*) *Indicates that the keyword is required*
 
 ## Usage
-
 ```typescript
 import { Adapter } from 'webcontent';
 
