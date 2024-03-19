@@ -1,4 +1,4 @@
-scriptfile "`~/../routes/_index.tsx`";
+scriptfile "`~/routes/_index.tsx`";
 
 EN/UK: {
     title "`Index`",
